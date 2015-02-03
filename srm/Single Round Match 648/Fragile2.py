@@ -21,11 +21,11 @@ class Fragile2:
             component.append(x)
             if len(graphConstruct[x]) == 0:
                 connectedComponents.append([x])
-            for y in graphConstruct[x]:
-                if y != x:
-                    component.append(y)
-            connectedComponents.append(component)
-        return connectedComponents                
+            else:
+                for y in graphConstruct[x]:
+                    if y != x:
+                        component.append(y)
+                                        
 
 
 # CUT begin
